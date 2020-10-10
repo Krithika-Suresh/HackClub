@@ -1,3 +1,20 @@
 body{
-    font-family: "sansita swashed";
+    font-family: "Lemonada";
+}
+body{
+    padding-top: 55px;
+}
+#intro{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+#intro img{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    width: 1600px;
+
 }
