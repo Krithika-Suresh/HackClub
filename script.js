@@ -7,4 +7,12 @@ $(function(){
             $(this).fadeIn("slow")
         });
     }, 2500);
+    $(".navbar");
+    $(window).scroll(function(){
+        if ($(window).scrollTop()<40) {
+            $(".navbar").slideDown(200);          
+        } else {
+            $(".navbar").slideUp(200);
+        }
+    });
 });
