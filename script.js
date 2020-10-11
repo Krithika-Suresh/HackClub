@@ -1,12 +1,15 @@
 $(function(){
-    var roles = ["animal lover", "funny person", "cook"];
+    var roles = ["cook", "animal lover", "funny person"];
     var count=0;
+    var $typeSpan = $("#intro .content h2 span").typist({
+        text: roles[count]
+    });
     setInterval(() => {
-        $("#intro .content h2 span").fadeOut("slow", function(){
-            $(this).text(roles[count++ % roles.length]);
-            $(this).fadeIn("slow")
-        });
-    }, 2500);
+      $typeSpan
+        .typistRemove(roles[count++ % roles.length].length)
+        .typistPause(2000)
+        .typistAdd(roles[count % roles.length]);
+    }, 5000);
     $(".navbar");
     $(window).scroll(function(){
         if ($(window).scrollTop()<40) {
